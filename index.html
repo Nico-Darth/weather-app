@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Weer Nu</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center align-items-center min-vh-100">
+            <div class="col-md-6 text-center">
+                <h1 class="mb-4">Weer App</h1>
+                <div class="input-group mb-3">
+                    <input type="text" id="cityInput" class="form-control" placeholder="Voer een stad in" aria-label="Voer een stad in" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" id="getWeather" type="button" id="button-addon2">Zoek Weer</button>
+                    </div>
+                </div>
+
+                <!-- Switch knop voor Celsius en Fahrenheit -->
+                <div class="form-check form-switch mb-4">
+                    <input class="form-check-input" type="checkbox" id="tempSwitch">
+                    <label class="form-check-label" for="tempSwitch">Schakel naar Fahrenheit</label>
+                </div>
+
+                <div class="weather-result d-none" id="weatherResult">
+                    <h2 class="temperature-status" id="temperature"></h2>
+                    <h3 class="temperature-status" id="status"></h3>
+                    <div class="alert alert-warning d-none" id="warningMessage"></div> <!-- Waarschuwingselement -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
