@@ -81,7 +81,7 @@ function showWarning(temperature, weatherDescription) {
         warning = '🚨 Let op! Het is erg heet buiten! Blijf gehydrateerd!';
     } else if (temperature <= 0) {
         warning = '🥶 Het is erg koud! Draag warme kleding!';
-    } else if (weatherDescription.includes('rain') && (weatherDescription.includes('heavy') || weatherDescription.includes('light'))) {
+    } else if (weatherDescription.includes('rain') && (weatherDescription.includes('heavy') || weatherDescription.includes('light') || weatherDescription.includes('moderate'))) {
         warning = '🌧️ Er is regen verwacht. Neem een paraplu mee!';
     }
     
@@ -111,3 +111,4 @@ function getEmoji(description) {
         return '🌈'; // Voor andere weersomstandigheden
     }
 }
+
